@@ -75,21 +75,21 @@ const Organizations = [
         name: "SWE",
         description: "This is the first organization",
         image: assets.nft02,
-        events: [Events[0]]
+        events: [Suggested[0], Suggested[1], Suggested[3]]
     },
     {
         id: 2,
         name: "SASE",
         description: "This is the first organization",
         image: assets.nft02,
-        events: [Events[0]]
+        events: [Events[1]]
     },
     {
         id: 3,
         name: "Computer Scientists",
         description: "This is the first organization",
         image: assets.nft02,
-        events: [Events[0]]
+        events: [Events[0], Suggested[2]]
     }
 ]
 
