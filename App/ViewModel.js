@@ -34,6 +34,9 @@ class ViewModel {
     getOrganizations() {
         return Organizations;
     }
+    getSuggested() {
+        return this.events;
+    }
 
     getUpcomingEvents() {
         let events = []

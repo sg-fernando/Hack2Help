@@ -12,7 +12,7 @@ const Home = () => {
     const onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
         setIndex(viewableItems[0].index);
     }, []);
-    var list = [{id:0,val:<Attending/>}, {id:1,val:<Organizations/>}]
+    var list = [{id:0,val:<Attending/>}, {id:1,val:<Suggested/>}]
   return (
     <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
         <SafeAreaView>
@@ -49,13 +49,13 @@ const Attending = () => {
     )
 }
 
-const Organizations = () => {
+const Suggested = () => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
-            <Text style={{ fontSize: 30, fontWeight: 'bold', marginLeft: 20, marginTop: 20 }}>Organizations</Text>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', marginLeft: 20, marginTop: 20 }}>Suggested</Text>
             <FlatList
-            data={ViewModelInstance.getOrganizations()}
-            renderItem={({ item }) => <OrgCard org={item} />}
+            data={ViewModelInstance.getSuggested()}
+            renderItem={({ item }) => <EventCard event={item} />}
             keyExtractor={item => item.id}
             showsVerticalScrollIndicator={false}
             />

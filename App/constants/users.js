@@ -108,7 +108,7 @@ const Users = [
             {
                 id: 14,
                 name: "SASE",
-                description: "Society of Asian Scientists and Engineers. Club of Colorado School of Mines",
+                description: "Socity of Asian Scientists and Engineers. Club of Colorado Schoole of Mines",
             },
             {
                 id: 15,
