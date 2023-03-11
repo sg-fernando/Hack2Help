@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     eventAndTime: {
+        borderWidth: 3,
+        borderColor: 'white',
+        backgroundColor: '#FCC3FF',
         flexDirection: 'row',
 
     }
