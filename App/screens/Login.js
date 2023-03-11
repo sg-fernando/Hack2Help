@@ -3,7 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, SafeAreaView, TouchableHighlight, TextInput, ImageBackground, Image, View } from 'react-native';
 import { COLORS, SIZES, FONTS, assets } from '../constants';
 import { Ionicons } from '@expo/vector-icons';
-import { happy } from 'ionicons/icons';
 
 
 import ViewModelInstance from '../ViewModel';

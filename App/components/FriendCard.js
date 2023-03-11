@@ -18,6 +18,8 @@ const FriendCard = ({ friend, handleRequest }) => {
 const styles = StyleSheet.create({
     containter: {
         flexDirection: 'column',
+        flexWrap: 'wrap',
+        justifyContent: 'space-evenly',
         alignItems: 'left',
         padding: 10,
         marginLeft: 10,
