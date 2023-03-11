@@ -3,15 +3,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, SafeAreaView, TouchableHighlight, TextInput, ImageBackground, Image, View } from 'react-native';
 import { COLORS, SIZES, FONTS, assets } from '../constants';
 import { Ionicons } from '@expo/vector-icons';
+import { happy } from 'ionicons/icons';
+
 
 import ViewModelInstance from '../ViewModel';
 
 export default function Login({ navigation }) {
     const [username, onChangeUsername] = React.useState('');
     const [password, onChangePass] = React.useState('');
-
-    const color = COLORS.pastel_pink;
-    const size = SIZES.font;
   return (
     <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
       <SafeAreaView style={styles.container}>
@@ -27,21 +26,26 @@ export default function Login({ navigation }) {
                     value={username}
                     placeholderTextColor="#DDD" 
                     />
+                    <Ionicons name="mail-outline" size="large" color="white" />
                 </View>
-                <TextInput
-                style={styles.input}
-                onChangeText={(val) => onChangePass(val)}
-                placeholder={"Password"}
-                value={password}
-                placeholderTextColor="#DDD" 
-                />
+                <View style={styles.inputContainer}>
+                    <TextInput
+                    style={styles.input}
+                    onChangeText={(val) => onChangePass(val)}
+                    placeholder={"Password"}
+                    value={password}
+                    secureTextEntry={true}
+                    placeholderTextColor="#DDD" 
+                    />
+                    <Ionicons name="lock-closed-outline" size="large" color="white" />
+                </View>
                 <TouchableHighlight
                 style={styles.loginButton}
                 onPress={() => ViewModelInstance.login(username, password, navigation)}
                 underlayColor="#DDDDDD">
                 <Text style={styles.loginText}>Log In</Text>
                 </TouchableHighlight>
-                <Text style={styles.createAccount}>New to Huddle? Create An Account</Text>
+                <Text style={styles.createAccount}>Don't have an account? Register</Text>
 
         </View>
         <StatusBar style="auto" />
@@ -78,7 +82,10 @@ const styles = StyleSheet.create({
     color: COLORS.white
   },
   input: {
-
+    height: "100%",
+    width: "100%",
+    color: COLORS.white,
+    fontSize: SIZES.medium,
   },
   loginButton: {
     marginRight: 40,
@@ -96,7 +103,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
     paddingLeft: 10,
-    paddingRight: 10,
     fontSize: SIZES.medium
   },
   createAccount: {
@@ -134,7 +140,7 @@ const styles = StyleSheet.create({
         padding: "0%",
         color: COLORS.white,
         borderColor: COLORS.white,
-        height: "6%",
+        height: "7%",
         width: "60%",
         flexDirection: 'row',
         alignItems: 'center',

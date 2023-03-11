@@ -7,6 +7,7 @@ import ProfileHeader from './ProfileHeader'
 import ModalCard from './ModalCard'
 import EventCard from './EventCard'
 import FriendCard from './FriendCard'
+import OrgCard from './OrgCard'
 import OrganizationCard from './OrganizationCard'
 
 export {
@@ -19,5 +20,6 @@ export {
     ModalCard, 
     EventCard, 
     FriendCard, 
-    OrganizationCard
+    OrganizationCard,
+    OrgCard
 }
