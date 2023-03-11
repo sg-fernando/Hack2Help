@@ -6,6 +6,7 @@ import { COLORS, SIZES } from '../constants';
 
 import Home from './Home';
 import Following from './Following'
+import CreateEvent from './CreateEvent'
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,10 @@ const AppScreens = () => {
                 tabBarIcon: ({ color, size }) => (
                     <Ionicons name="people" color={color} size={size} />
                 ),
+                }}
+        />
+        <Tab.Screen name="CreateEvent" component={CreateEvent} options={{
+                tabBarVisible: false,
                 }}
         />
     </Tab.Navigator>

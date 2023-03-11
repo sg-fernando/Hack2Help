@@ -20,13 +20,13 @@ const Following = ({ navigation }) => {
     };
 
     const handleSearch = (value) => {
-        ViewModelInstance.searchFriends(value);
+        ViewModelInstance.searchFollowing(value);
         setList([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
-        console.log(ViewModelInstance.searchFriendsResults);
     };
 
     const onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
         setIndex(viewableItems[0].index);
+        ViewModelInstance.followingIndex = viewableItems[0].index;
     }, []);
 
 
@@ -60,7 +60,7 @@ const People = ({ handleRequest }) => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
             <FlatList
-                data={ViewModelInstance.friends}
+                data={ViewModelInstance.searchFriendsResults}
                 renderItem={({ item }) => <FriendCard friend={item} handleRequest={handleRequest}/>}
                 keyExtractor={item => item.id}
                 showsVerticalScrollIndicator={false}
