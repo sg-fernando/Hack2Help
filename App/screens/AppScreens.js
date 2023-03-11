@@ -32,10 +32,10 @@ const AppScreens = () => {
                 ),
                 }}
         />
-        <Tab.Screen name="CreateEvent" component={CreateEvent} options={{
+        {/* <Tab.Screen name="CreateEvent" component={CreateEvent} options={{
                 tabBarVisible: false,
                 }}
-        />
+        /> */}
     </Tab.Navigator>
   );
 }

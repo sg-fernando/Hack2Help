@@ -6,7 +6,7 @@
 // import ViewModelInstance from '../ViewModel';
 
 
-// const NewEvent = ({navigation}) => {
+// const CreateEvent = ({navigation}) => {
 //   const [title, onChangeTitle] = React.useState('');
 //   const [description, onChangeDesc] = React.useState('');
 //   const [friend, onChangeFriends] = React.useState('');
@@ -201,4 +201,4 @@
 //   }
 // });
 
-// export default NewEvent
+// export default CreateEvent
