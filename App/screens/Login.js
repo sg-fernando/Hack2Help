@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
     height: "6%",
     width: "60%",
     margin: "5%",
-    borderWidth: 1,
-    padding: "5%",
+    borderBottomWidth: 1,
+    padding: "0%",
     color: COLORS.white,
     borderColor: COLORS.white
   },
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
         opacity: 0.5,
         borderColor: COLORS.white,
         borderRadius: 10,
+        borderWidth: 1,
         padding: 10,
         width: "80%",
         height: "60%",
