@@ -7,6 +7,7 @@ import { COLORS, SIZES } from '../constants';
 import Home from './Home';
 import Following from './Following'
 import CreateEvent from './CreateEvent'
+import EventScreen from './EventScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,6 +37,10 @@ const AppScreens = () => {
                 tabBarVisible: false,
                 }}
         /> */}
+        <Tab.Screen name="Event" component={EventScreen} options={{
+                tabBarVisible: false,
+                }}
+        />
     </Tab.Navigator>
   );
 }
