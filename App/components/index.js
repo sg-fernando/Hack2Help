@@ -9,6 +9,7 @@ import EventCard from './EventCard'
 import FriendCard from './FriendCard'
 import OrgCard from './OrgCard'
 import OrganizationCard from './OrganizationCard'
+import EventModal from './EventModal'
 
 export {
     HomeHeader,
@@ -21,5 +22,6 @@ export {
     EventCard, 
     FriendCard, 
     OrganizationCard,
-    OrgCard
+    OrgCard,
+    EventModal
 }
