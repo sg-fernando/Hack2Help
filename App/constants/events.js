@@ -15,14 +15,14 @@ const Events = [
 const Organizations = [
     {
         id: 1,
-        name: "SASE",
+        name: "SWE",
         description: "This is the first organization",
         image: assets.nft02,
         events: [Events[0]]
     },
     {
         id: 2,
-        name: "Environmentalists",
+        name: "SASE",
         description: "This is the first organization",
         image: assets.nft02,
         events: [Events[0]]
