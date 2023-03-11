@@ -8,7 +8,7 @@ const FriendCard = ({ friend, handleRequest }) => {
         <View style={styles.containter}>
             <Image source={friend.image} style={styles.img}></Image>
             <View style={styles.nameContainer}>
-                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{friend.firstname} {friend.lastname}</Text>
+                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{friend.firstname}</Text>
                 <Text style={{ fontSize: 16, color: 'gray' }}>@{friend.username}</Text>
             </View>
         </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     nameContainer: {
-        flexDirection: 'row',
+        flexDirection: 'column',
     }
 })
 
