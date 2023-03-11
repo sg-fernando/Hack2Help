@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { FlatList, SafeAreaView, Text, View, StyleSheet, ImageBackground } from 'react-native';
+import { FlatList, SafeAreaView, Text, View, StyleSheet, ImageBackground, Image } from 'react-native';
 import { Dimensions } from 'react-native';
 import { assets } from '../constants';
 import ViewModelInstance from '../ViewModel';

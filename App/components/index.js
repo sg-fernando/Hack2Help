@@ -4,7 +4,6 @@ import Friend from './Friend'
 import Request from './Request'
 import FriendsHeader from './FriendsHeader'
 import ProfileHeader from './ProfileHeader'
-import ModalCard from './ModalCard'
 import EventCard from './EventCard'
 import FriendCard from './FriendCard'
 import OrgCard from './OrgCard'
@@ -18,7 +17,6 @@ export {
     FriendsHeader, 
     ProfileHeader, 
     Request, 
-    ModalCard, 
     EventCard, 
     FriendCard, 
     OrganizationCard,
