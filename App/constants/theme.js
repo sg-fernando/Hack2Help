@@ -12,7 +12,8 @@ export const COLORS = {
   pastel_pink: "#FEDEFF",
   pastel_darker_pink: "#F15AFA",
 
-  primary: '#E8C4C4',
+  primary: '#e0b4fc',
+  navbar: 'd4d4fc',
   background: '#F2E5E5',
   card: '#FFF',
   text: '#2B3A55',

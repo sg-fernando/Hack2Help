@@ -3,6 +3,7 @@ import eth from "../assets/icons/eth.png";
 import heart from "../assets/icons/heart.png";
 import left from "../assets/icons/left.png";
 import search from "../assets/icons/search.png";
+import search2 from "../assets/icons/search2.png";
 
 import logo from "../assets/images/logo.png";
 import huddle from "../assets/images/HUDDLE.png";
@@ -63,6 +64,7 @@ export default {
   heart,
   left,
   search,
+  search2,
 
   logo,
   huddle,
