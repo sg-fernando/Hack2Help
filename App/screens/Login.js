@@ -12,34 +12,29 @@ export default function Login({ navigation }) {
     <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
       <SafeAreaView style={styles.container}>
 
-        {/* <View style={{flex:1,alignItems:"center",justifyContent:"center"}}> */}
-          <Text style={styles.title}>Welcome to Huddle!</Text>
-          <Image
-            style={styles.tinyLogo}
-            source={assets.huddle}
-          />
-          <Text style={styles.subtitle}>Create an Account or Login Below</Text>
+        {/* Box with transparent and blur */}
+        <View style={styles.box}>
+                <Text style={styles.normalText}>Username: </Text>
+                <TextInput
+                style={styles.input}
+                onChangeText={(val) => onChangeUsername(val)}
+                value={username}
+                />
+                <Text style={styles.normalText}>Password: </Text>
+                <TextInput
+                style={styles.input}
+                onChangeText={(val) => onChangePass(val)}
+                value={password}
+                />
+                <TouchableHighlight
+                style={styles.loginButton}
+                onPress={() => ViewModelInstance.login(username, password, navigation)}
+                underlayColor="#DDDDDD">
+                <Text style={styles.loginText}>Log In</Text>
+                </TouchableHighlight>
+                <Text style={styles.createAccount}>New to Huddle? Create An Account</Text>
 
-        {/* </View> */}
-        <Text style={styles.normalText}>Username: </Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={(val) => onChangeUsername(val)}
-          value={username}
-        />
-        <Text style={styles.normalText}>Password: </Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={(val) => onChangePass(val)}
-          value={password}
-        />
-        <TouchableHighlight
-          style={styles.loginButton}
-          onPress={() => ViewModelInstance.login(username, password, navigation)}
-          underlayColor="#DDDDDD">
-          <Text style={styles.loginText}>Log In</Text>
-        </TouchableHighlight>
-        <Text style={styles.createAccount}>New to Huddle? Create An Account</Text>
+        </View>
         <StatusBar style="auto" />
 
       </SafeAreaView>
@@ -117,5 +112,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
     height: '100%',
-  }
+  },
+    box: {
+        backgroundColor: "black",
+        opacity: 0.5,
+        borderColor: COLORS.white,
+        borderRadius: 10,
+        padding: 10,
+        width: "80%",
+        height: "60%",
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
