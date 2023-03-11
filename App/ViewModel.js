@@ -3,6 +3,7 @@ class ViewModel {
     constructor() {
         this.username = "";
         this.password = "";
+        this.FriendListRef;
     }
     
 

@@ -1,13 +1,12 @@
 import { useCallback, useState } from 'react';
 import { FlatList, SafeAreaView, Text, View, StyleSheet, ImageBackground } from 'react-native';
-import { Friend, FriendsHeader, Request } from '../components';
 import { Dimensions } from 'react-native';
 import { assets } from '../constants';
-
 import ViewModelInstance from '../ViewModel';
+import { Friend, FriendsHeader, Request } from '../components';
 
 const Following = ({ navigation }) => {
-    const [list, setList] = useState([{ id: 1, val: <MyFriends /> }, { id: 2, val: <Requests handleRequest={handleRequest} /> }]);
+    const [list, setList] = useState([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
     const [index, setIndex] = useState(0);
 
     const handleRequest = (val, person) => {
@@ -16,12 +15,12 @@ const Following = ({ navigation }) => {
         } else {
             ViewModelInstance.declineRequest(person);
         }
-        setList([{ id: 1, val: <MyFriends /> }, { id: 2, val: <Requests handleRequest={handleRequest} /> }]);
+        setList([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
     };
 
     const handleSearch = (value) => {
         ViewModelInstance.searchFriends(value);
-        setList([{ id: 1, val: <MyFriends /> }, { id: 2, val: <Requests handleRequest={handleRequest} /> }]);
+        setList([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
         console.log(ViewModelInstance.searchFriendsResults);
     };
 
@@ -33,7 +32,7 @@ const Following = ({ navigation }) => {
     return (
         <ImageBackground source={assets.gradient6} resizeMode="cover" style={styles.image}>
             <SafeAreaView style={{ flex: 1 }}>
-                <FriendsHeader index={index} onSearch={handleSearch} />
+                {/* <FriendsHeader index={index} onSearch={handleSearch} /> */}
                 <FlatList
                     ref={(ref) => {
                         ViewModelInstance.FriendListRef = ref;
@@ -56,7 +55,7 @@ const Following = ({ navigation }) => {
     );
 }
 
-const Requests = ({ handleRequest }) => {
+const People = ({ handleRequest }) => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
             <FlatList
@@ -69,7 +68,7 @@ const Requests = ({ handleRequest }) => {
     );
 }
 
-const MyFriends = () => {
+const Organizations = () => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
             <FlatList
