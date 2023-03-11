@@ -13,7 +13,7 @@ export default function Login({ navigation }) {
     const color = COLORS.pastel_pink;
     const size = SIZES.font;
   return (
-    <ImageBackground source={assets.gradient5} resizeMode="cover" style={styles.image}>
+    <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
       <SafeAreaView style={styles.container}>
 
         {/* Box with transparent and blur */}
