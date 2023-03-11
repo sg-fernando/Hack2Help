@@ -1,12 +1,12 @@
 import { useCallback, useState } from 'react';
-import { View, Text, SafeAreaView, FlatList, ImageBackground, StyleSheet, Dimensions} from 'react-native'
+import { View, Button, Text, SafeAreaView, FlatList, ImageBackground, StyleSheet, Dimensions} from 'react-native'
 import { assets } from '../constants'
 import { EventCard, OrgCard } from '../components'
 import React from 'react'
 
 import ViewModelInstance from '../ViewModel'
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [index, setIndex] = useState(0);
 
     const onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
@@ -16,6 +16,13 @@ const Home = () => {
   return (
     <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
         <SafeAreaView>
+
+            <Button
+                onPress={navigation.navigate("CreateEvent")}
+                title="Create Events"
+                color="#e0b4fc"
+            />
+
             <FlatList
                 onViewableItemsChanged={onViewableItemsChanged}
                 style={{ width: Dimensions.get('window').width, height: "100%" }}

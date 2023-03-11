@@ -6,18 +6,21 @@ class ViewModel {
         this.firstname;
 
         this.friends;
+        this.organizations
         this.otherUsers;
         this.events;
         this.upcomingEvents;
         this.organizations;
 
         this.searchFriendsResults;
+        this.searchOrganizationsResults;
         this.modalVisible = false;
         this.modalOptions;
         this.friendRequests;
         
         this.FriendListRef;
-        this.AgendaRef;
+        this.followingIndex = 0;
+
 
         this.updateCalendarEvents = () => {};
         this.updateHomeEvents = () => {};
@@ -32,7 +35,7 @@ class ViewModel {
         return this.events;
     }
     getOrganizations() {
-        return Organizations;
+        return this.organizations;
     }
     getSuggested() {
         return this.events;
@@ -87,18 +90,37 @@ class ViewModel {
         this.events[17].push(event);
     }
 
+    searchFollowing(value) {
+        console.log(this.followingIndex);
+        if (this.followingIndex === 1) {
+            this.searchFriends(value);
+        } else if (this.followingIndex === 0) {
+            this.searchOrganizations(value);
+        }
+    }
+
+    searchOrganizations(value) {
+        if (!value.length) {
+            this.searchOrganizationsResults = this.organizations;
+            return;
+        }
+
+        const filteredData = this.organizations.filter((item) =>
+            item.name.toLowerCase().includes(value.toLowerCase()));
+
+        if (filteredData.length) {
+            this.searchOrganizationsResults = filteredData;
+        } else {
+            this.searchOrganizationsResults = this.organizations;
+        }
+    }
+
     searchFriends(value) {
         console.log(value);
         if (!value.length) {
             this.searchFriendsResults = this.friends;
             return;
         }
-
-        this.FriendListRef.scrollToIndex({
-            animated: true,
-            index: 1,
-            viewPosition: 0
-        });
 
         const filteredData = this.friends.filter((item) =>
             item.firstname.toLowerCase().includes(value.toLowerCase()));
