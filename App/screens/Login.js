@@ -26,7 +26,6 @@ export default function Login({ navigation }) {
                     value={username}
                     placeholderTextColor="#DDD" 
                     />
-                    {/* add an icon */}
                     <Ionicons name="mail-outline" size="large" color="white" />
                 </View>
                 <View style={styles.inputContainer}>
@@ -46,7 +45,7 @@ export default function Login({ navigation }) {
                 underlayColor="#DDDDDD">
                 <Text style={styles.loginText}>Log In</Text>
                 </TouchableHighlight>
-                <Text style={styles.createAccount}>New to Huddle? Create An Account</Text>
+                <Text style={styles.createAccount}>Don't have an account? Register</Text>
 
         </View>
         <StatusBar style="auto" />
@@ -104,7 +103,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
     paddingLeft: 10,
-    paddingRight: 10,
     fontSize: SIZES.medium
   },
   createAccount: {

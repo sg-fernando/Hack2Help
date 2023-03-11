@@ -7,7 +7,8 @@ import ProfileHeader from './ProfileHeader'
 import ModalCard from './ModalCard'
 import EventCard from './EventCard'
 import FriendCard from './FriendCard'
+import OrgCard from './OrgCard'
 
 export {
-    HomeHeader, FocusedStatusBar, Friend, FriendsHeader, ProfileHeader, Request, ModalCard, EventCard, FriendCard
+    HomeHeader, FocusedStatusBar, Friend, FriendsHeader, ProfileHeader, Request, ModalCard, EventCard, FriendCard, OrgCard
 }

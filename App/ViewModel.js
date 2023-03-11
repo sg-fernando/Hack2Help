@@ -1,4 +1,4 @@
-import { Users, modalOptions , Events} from './constants';
+import { Users, modalOptions , Events, Organizations} from './constants';
 
 class ViewModel {
     constructor() {
@@ -27,12 +27,11 @@ class ViewModel {
         this.updateHomeEvents();
     }
 
-    getCalendarFriends() {
-        let friends = [];
-        for (let i = 0; i < this.friends.length; i++) {
-            friends.push({key:i, value:(this.friends[i].firstname + " " + this.friends[i].lastname)});
-        }
-        return friends;
+    getAttending() {
+        return this.events;
+    }
+    getOrganizations() {
+        return Organizations;
     }
 
     getUpcomingEvents() {
