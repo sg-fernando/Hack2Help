@@ -96,7 +96,7 @@ class ViewModel {
 
         this.FriendListRef.scrollToIndex({
             animated: true,
-            index: 0,
+            index: 1,
             viewPosition: 0
         });
 
