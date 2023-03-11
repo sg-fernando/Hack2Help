@@ -22,7 +22,6 @@ const Home = ({navigation}) => {
                 onViewableItemsChanged={onViewableItemsChanged}
                 style={{ width: Dimensions.get('window').width, height: "100%" }}
                 vertical
-                pagingEnabled
                 data={list}
                 keyExtractor={item => item.id}
                 showsHorizontalScrollIndicator={false}
