@@ -2,7 +2,6 @@ import { Users, modalOptions , Events} from './constants';
 
 class ViewModel {
     constructor() {
-
         this.user;
         this.firstname;
 
@@ -52,7 +51,7 @@ class ViewModel {
         // const user = Users.find((user) => user.username.toLowerCase() === username.toLowerCase() && user.password === password);
 
         // if (user) {
-            this.user = user;
+            this.user = Users[0];
             this.otherUsers = this.user.others;
             this.friends = this.user.friends;
             this.searchFriendsResults = this.user.friends;
