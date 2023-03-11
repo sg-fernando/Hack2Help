@@ -30,7 +30,7 @@ const Following = ({ navigation }) => {
 
 
     return (
-        <ImageBackground source={assets.gradient6} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={assets.gradient3} resizeMode="cover" style={styles.image}>
             <SafeAreaView style={{ flex: 1 }}>
                 {/* <FriendsHeader index={index} onSearch={handleSearch} /> */}
                 <FlatList
