@@ -8,13 +8,13 @@ import { COLORS, FONTS, SIZES, assets } from "../constants";
 const FriendsHeader = ({onSearch, index}) => {
 
     let friendTextComponent;
-    let requestTextComponent;
+    let groupTextComponent;
     if (index === 0) {
         friendTextComponent = <View style={styles.selected}><Text>My Friends</Text></View>;
-        requestTextComponent = <View style={styles.notSelected}><Text>Requests</Text></View>;
+        groupTextComponent = <View style={styles.notSelected}><Text>Groups</Text></View>;
     } else {
         friendTextComponent = <View style={styles.notSelected}><Text>My Friends</Text></View>;
-        requestTextComponent = <View style={styles.selected}><Text>Requests</Text></View>;
+        groupTextComponent = <View style={styles.selected}><Text>Groups</Text></View>;
     }
 
   return (
@@ -22,24 +22,24 @@ const FriendsHeader = ({onSearch, index}) => {
         <View style={styles.spacing}>
             <Pressable onPress={() => ViewModelInstance.FriendListRef.scrollToIndex({
                 animated: true,
+                index: 1,
+                viewPosition: 0
+            })}>
+                {groupTextComponent}
+            </Pressable>
+            <Pressable onPress={() => ViewModelInstance.FriendListRef.scrollToIndex({
+                animated: true,
                 index: 0,
                 viewPosition: 0
             })}>
                 {friendTextComponent}
-            </Pressable>
-            <Pressable onPress={() => ViewModelInstance.FriendListRef.scrollToIndex({
-                animated: true,
-                index: 1,
-                viewPosition: 0
-            })}>
-                {requestTextComponent}
             </Pressable>
         </View>
 
       <View style={{ marginTop: SIZES.font }}>
         <View style={styles.searchBar}>
           <Image
-            source={assets.search}
+            source={assets.search2}
             resizeMode="contain"
             style={{ width: 20, height: 20, marginRight: SIZES.base }}
           />
@@ -56,7 +56,7 @@ const FriendsHeader = ({onSearch, index}) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.pastel_darker_blue,
+    backgroundColor: COLORS.navbar,
     padding: SIZES.font,
     height: 120,
   },
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   selected: {
-    backgroundColor: COLORS.pastel_pink,
+    backgroundColor: COLORS.white,
     fontFamily: FONTS.regular,
     fontSize: SIZES.small,
     color: COLORS.black,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   searchBar: {
     width: "100%",
     borderRadius: SIZES.font,
-    backgroundColor: COLORS.pastel_pink,
+    backgroundColor: COLORS.white,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: SIZES.font,
