@@ -36,11 +36,28 @@ import gradient from "../assets/images/gradient.png";
 import gradient2 from "../assets/images/gradient2.png";
 import gradient3 from "../assets/images/gradient3.png";
 import gradient4 from "../assets/images/gradient4.png";
-import gradient5 from "../assets/images/gradient5.png";
-import gradient6 from "../assets/images/gradient6.png";
-import gradient7 from "../assets/images/gradient7.png";
+// import gradient5 from "../assets/images/gradient5.png";
+// import gradient6 from "../assets/images/gradient6.png";
+// import gradient7 from "../assets/images/gradient7.png";
+
+import amiaimg from "../assets/images/amiaimg.jpg";
+import fernandoimg from "../assets/images/fernandoimg.jpg";
+import arianimg from "../assets/images/arianimg.jpg";
+import elaineimg from "../assets/images/elaineimg.jpg";
+import katimg from "../assets/images/katimg.jpg";
+import collinimg from "../assets/images/collinimg.jpg";
+import sephiaimg from "../assets/images/sephiaimg.jpg";
 
 export default {
+  amiaimg,
+  fernandoimg,
+  arianimg,
+  elaineimg,
+  katimg,
+  collinimg,
+  sephiaimg,
+
+
   badge,
   eth,
   heart,
@@ -79,7 +96,7 @@ export default {
   gradient2,
   gradient3,
   gradient4,
-  gradient5,
-  gradient6,
-  gradient7,
+  // gradient5,
+  // gradient6,
+  // gradient7,
 };
