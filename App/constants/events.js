@@ -15,21 +15,21 @@ const Events = [
 const Organizations = [
     {
         id: 1,
-        name: "Organization 1",
+        name: "SWE",
         description: "This is the first organization",
         image: assets.nft02,
         events: [Events[0]]
     },
     {
         id: 2,
-        name: "Organization 1",
+        name: "SASE",
         description: "This is the first organization",
         image: assets.nft02,
         events: [Events[0]]
     },
     {
         id: 3,
-        name: "Organization 1",
+        name: "Computer Scientists",
         description: "This is the first organization",
         image: assets.nft02,
         events: [Events[0]]

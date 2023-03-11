@@ -3,7 +3,7 @@ import { FlatList, SafeAreaView, Text, View, StyleSheet, ImageBackground } from 
 import { Dimensions } from 'react-native';
 import { assets } from '../constants';
 import ViewModelInstance from '../ViewModel';
-import { Friend, FriendsHeader, Request, FriendCard, OrganizationCard } from '../components';
+import { Friend, FriendsHeader, Request, FriendCard, OrgCard } from '../components';
 
 const Following = ({ navigation }) => {
     const orderSwipe = [{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]
@@ -73,8 +73,8 @@ const Organizations = () => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
             <FlatList
-                data={ViewModelInstance.organizations}
-                renderItem={({ item }) => <OrganizationCard org={item} />}
+                data={ViewModelInstance.getOrganizations()}
+                renderItem={({ item }) => <OrgCard org={item} />}
                 keyExtractor={item => item.id}
                 showsVerticalScrollIndicator={false}
             />

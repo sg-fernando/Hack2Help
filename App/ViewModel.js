@@ -34,6 +34,9 @@ class ViewModel {
     getOrganizations() {
         return Organizations;
     }
+    getSuggested() {
+        return this.events;
+    }
 
     getUpcomingEvents() {
         let events = []
@@ -93,7 +96,7 @@ class ViewModel {
 
         this.FriendListRef.scrollToIndex({
             animated: true,
-            index: 0,
+            index: 1,
             viewPosition: 0
         });
 

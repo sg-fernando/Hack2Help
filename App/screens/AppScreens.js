@@ -18,7 +18,7 @@ const AppScreens = () => {
         initialRouteName = "Home"
     >
       <Tab.Screen name="Home" component={Home} options={{
-                tabBarLabel: 'Home',
+                tabBarLabel: 'Events',
                 tabBarIcon: ({ color, size }) => (
                     <Ionicons name="home" color={color} size={size} />
                 ),
