@@ -44,7 +44,7 @@ const FriendsHeader = ({onSearch, index}) => {
             style={{ width: 20, height: 20, marginRight: SIZES.base }}
           />
           <TextInput
-            placeholder="Search or Add Friends"
+            placeholder="Search"
             style={{ flex: 1 }}
             onChangeText={onSearch}
           />
