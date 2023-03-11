@@ -73,7 +73,7 @@ const Organizations = () => {
     return (
         <View style={{ flex: 1, width: Dimensions.get('window').width }}>
             <FlatList
-                data={ViewModelInstance.getOrganizations()}
+                data={ViewModelInstance.searchOrganizationsResults}
                 renderItem={({ item }) => <OrgCard org={item} />}
                 keyExtractor={item => item.id}
                 showsVerticalScrollIndicator={false}
