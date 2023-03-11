@@ -8,6 +8,7 @@ const OrganizationCard = ({ org }) => {
         <View style={styles.containter}>
             <View style={styles.nameContainer}>
                 <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{org.name}</Text>
+                <Text style={{ fontSize: 14, fontWeight: 'light'}}>{org.descriotion}</Text>
             </View>
         </View>
     );

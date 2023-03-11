@@ -108,14 +108,17 @@ const Users = [
             {
                 id: 14,
                 name: "SASE",
+                description: "Society of Asian Scientists and Engineers. Club of Colorado School of Mines",
             },
             {
                 id: 15,
-                name: "Environmentalists"
+                name: "Environmentalists",
+                description: "Group of people who love the environment and want to make the world more sustainable.",
             },
             {
                 id: 16,
-                name: "Computer Scientists"
+                name: "Computer Scientists",
+                description: "Nerdy shut-in introverts unite to save the world.",
             }
         ]
     }
