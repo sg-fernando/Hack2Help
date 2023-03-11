@@ -6,8 +6,6 @@ import { COLORS, SIZES } from '../constants';
 
 import Home from './Home';
 import Following from './Following'
-import CalendarScreens from './CalendarScreens';
-import Profile from './Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,13 +28,6 @@ const AppScreens = () => {
                 tabBarLabel: 'Following',
                 tabBarIcon: ({ color, size }) => (
                     <Ionicons name="people" color={color} size={size} />
-                ),
-                }}
-        />
-      <Tab.Screen name="Profile" component={Profile} options={{
-                tabBarLabel: 'Profile',
-                tabBarIcon: ({ color, size }) => (
-                    <Ionicons name="person" color={color} size={size} />
                 ),
                 }}
         />

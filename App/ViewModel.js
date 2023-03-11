@@ -1,4 +1,3 @@
-import {observable} from 'mobx';
 
 class ViewModel {
     constructor() {
@@ -8,7 +7,7 @@ class ViewModel {
     
 
     login(username, password, navigation) {
-        
+
     }
 }
 
