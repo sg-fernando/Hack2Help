@@ -18,7 +18,7 @@ const Home = () => {
         <SafeAreaView>
             <FlatList
                 onViewableItemsChanged={onViewableItemsChanged}
-                style={{ width: Dimensions.get('window').width }}
+                style={{ width: Dimensions.get('window').width, height: "100%" }}
                 vertical
                 pagingEnabled
                 data={list}
