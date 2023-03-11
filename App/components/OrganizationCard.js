@@ -7,7 +7,7 @@ const OrganizationCard = ({ org }) => {
     return (
         <View style={styles.containter}>
             <View style={styles.nameContainer}>
-                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{friend.name}</Text>
+                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{org.name}</Text>
             </View>
         </View>
     );
