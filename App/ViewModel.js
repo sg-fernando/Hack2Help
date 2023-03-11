@@ -1,4 +1,4 @@
-import { Users, modalOptions , Events, Organizations} from './constants';
+import { Users, modalOptions , Events, Organizations, Suggested} from './constants';
 
 class ViewModel {
     constructor() {
@@ -38,7 +38,7 @@ class ViewModel {
         return this.organizations;
     }
     getSuggested() {
-        return this.events;
+        return Suggested;
     }
 
     getUpcomingEvents() {
