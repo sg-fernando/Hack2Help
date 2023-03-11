@@ -5,7 +5,7 @@ import { COLORS, SIZES } from '../constants';
 
 
 import Home from './Home';
-import Friends from './Friends'
+import Following from './Following'
 import CalendarScreens from './CalendarScreens';
 import Profile from './Profile';
 
