@@ -10,11 +10,11 @@ const FriendsHeader = ({onSearch, index}) => {
     let friendTextComponent;
     let groupTextComponent;
     if (index === 0) {
-        friendTextComponent = <View style={styles.selected}><Text>My Friends</Text></View>;
-        groupTextComponent = <View style={styles.notSelected}><Text>Groups</Text></View>;
-    } else {
         friendTextComponent = <View style={styles.notSelected}><Text>My Friends</Text></View>;
         groupTextComponent = <View style={styles.selected}><Text>Groups</Text></View>;
+    } else {
+        friendTextComponent = <View style={styles.selected}><Text>My Friends</Text></View>;
+        groupTextComponent = <View style={styles.notSelected}><Text>Groups</Text></View>;
     }
 
   return (
@@ -22,14 +22,14 @@ const FriendsHeader = ({onSearch, index}) => {
         <View style={styles.spacing}>
             <Pressable onPress={() => ViewModelInstance.FriendListRef.scrollToIndex({
                 animated: true,
-                index: 1,
+                index: 0,
                 viewPosition: 0
             })}>
                 {groupTextComponent}
             </Pressable>
             <Pressable onPress={() => ViewModelInstance.FriendListRef.scrollToIndex({
                 animated: true,
-                index: 0,
+                index: 1,
                 viewPosition: 0
             })}>
                 {friendTextComponent}
