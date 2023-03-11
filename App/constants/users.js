@@ -103,6 +103,20 @@ const Users = [
                 image: assets.nft07,
                 friends: []
             },
+        ],
+        organizations: [
+            {
+                id: 14,
+                name: "SASE",
+            },
+            {
+                id: 15,
+                name: "Environmentalists"
+            },
+            {
+                id: 16,
+                name: "Computer Scientists"
+            }
         ]
     }
 ]

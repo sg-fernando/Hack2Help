@@ -9,6 +9,7 @@ class ViewModel {
         this.otherUsers;
         this.events;
         this.upcomingEvents;
+        this.organizations;
 
         this.searchFriendsResults;
         this.modalVisible = false;
@@ -54,6 +55,7 @@ class ViewModel {
             this.user = Users[0];
             this.otherUsers = this.user.others;
             this.friends = this.user.friends;
+            this.organizations = this.user.organizations;
             this.searchFriendsResults = this.user.friends;
             this.firstname = this.user.firstname;
             this.friendRequests = this.user.requests;
