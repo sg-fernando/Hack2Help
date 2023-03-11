@@ -1,17 +1,93 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { useCallback, useState } from 'react';
+import { FlatList, SafeAreaView, Text, View, StyleSheet, ImageBackground } from 'react-native';
+import { Dimensions } from 'react-native';
+import { assets } from '../constants';
+import ViewModelInstance from '../ViewModel';
+import { Friend, FriendsHeader, Request } from '../components';
 
- class Following extends Component {
+const Following = ({ navigation }) => {
+    const [list, setList] = useState([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
+    const [index, setIndex] = useState(0);
 
-  render() {
+    const handleRequest = (val, person) => {
+        if (val === 1) {
+            ViewModelInstance.acceptRequest(person);
+        } else {
+            ViewModelInstance.declineRequest(person);
+        }
+        setList([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
+    };
+
+    const handleSearch = (value) => {
+        ViewModelInstance.searchFriends(value);
+        setList([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
+        console.log(ViewModelInstance.searchFriendsResults);
+    };
+
+    const onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
+        setIndex(viewableItems[0].index);
+    }, []);
+
+
     return (
-        <SafeAreaView>
-            <Text>Following</Text>
-        </SafeAreaView>
-      
-    )
-  }
+        <ImageBackground source={assets.gradient6} resizeMode="cover" style={styles.image}>
+            <SafeAreaView style={{ flex: 1 }}>
+                {/* <FriendsHeader index={index} onSearch={handleSearch} /> */}
+                <FlatList
+                    ref={(ref) => {
+                        ViewModelInstance.FriendListRef = ref;
+                    }}
+                    onViewableItemsChanged={onViewableItemsChanged}
+                    style={{ width: Dimensions.get('window').width }}
+                    horizontal
+                    pagingEnabled
+                    data={list}
+                    keyExtractor={item => item.id}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item }) => {
+                        return (
+                            item.val
+                        );
+                    }}
+                />
+            </SafeAreaView>
+        </ImageBackground>
+    );
 }
 
-export default Following
+const People = ({ handleRequest }) => {
+    return (
+        <View style={{ flex: 1, width: Dimensions.get('window').width }}>
+            <FlatList
+                data={ViewModelInstance.friendRequests}
+                renderItem={({ item }) => <Request person={item} handleRequest={handleRequest} />}
+                keyExtractor={item => item.id}
+                showsVerticalScrollIndicator={false}
+            />
+        </View>
+    );
+}
+
+const Organizations = () => {
+    return (
+        <View style={{ flex: 1, width: Dimensions.get('window').width }}>
+            <FlatList
+                data={ViewModelInstance.searchFriendsResults}
+                renderItem={({ item }) => <Friend friend={item} />}
+                keyExtractor={item => item.id}
+                showsVerticalScrollIndicator={false}
+            />
+        </View>
+    );
+}
+
+
+const styles = StyleSheet.create({
+    image: {
+        flex: 1,
+        justifyContent: 'center',
+        width: '100%',
+        height: '100%',
+    }
+});
+export default Following;
