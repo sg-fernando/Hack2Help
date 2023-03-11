@@ -2,29 +2,38 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, SafeAreaView, TouchableHighlight, TextInput, ImageBackground, Image, View } from 'react-native';
 import { COLORS, SIZES, FONTS, assets } from '../constants';
+import { Ionicons } from '@expo/vector-icons';
 
 import ViewModelInstance from '../ViewModel';
 
 export default function Login({ navigation }) {
-  const [username, onChangeUsername] = React.useState('');
-  const [password, onChangePass] = React.useState('');
+    const [username, onChangeUsername] = React.useState('');
+    const [password, onChangePass] = React.useState('');
+
+    const color = COLORS.pastel_pink;
+    const size = SIZES.font;
   return (
     <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
       <SafeAreaView style={styles.container}>
 
         {/* Box with transparent and blur */}
         <View style={styles.box}>
-                <Text style={styles.normalText}>Username: </Text>
-                <TextInput
-                style={styles.input}
-                onChangeText={(val) => onChangeUsername(val)}
-                value={username}
-                />
-                <Text style={styles.normalText}>Password: </Text>
+                <Text style={styles.title}>Login</Text>
+                <View style={styles.inputContainer}>
+                    <TextInput
+                    style={styles.input}
+                    onChangeText={(val) => onChangeUsername(val)}
+                    placeholder={"Username"}
+                    value={username}
+                    placeholderTextColor="#DDD" 
+                    />
+                </View>
                 <TextInput
                 style={styles.input}
                 onChangeText={(val) => onChangePass(val)}
+                placeholder={"Password"}
                 value={password}
+                placeholderTextColor="#DDD" 
                 />
                 <TouchableHighlight
                 style={styles.loginButton}
@@ -52,7 +61,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: SIZES.title,
     paddingBottom: "3%",
-    color: COLORS.pastel_medium_blue,
+    color: "white",
     textAlign: 'center',
   },
   subtitle: {
@@ -69,13 +78,7 @@ const styles = StyleSheet.create({
     color: COLORS.white
   },
   input: {
-    height: "6%",
-    width: "60%",
-    margin: "5%",
-    borderBottomWidth: 1,
-    padding: "0%",
-    color: COLORS.white,
-    borderColor: COLORS.white
+
   },
   loginButton: {
     marginRight: 40,
@@ -123,6 +126,18 @@ const styles = StyleSheet.create({
         width: "80%",
         height: "60%",
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly'
+    },
+    inputContainer: {
+        margin: "5%",
+        borderBottomWidth: 1,
+        padding: "0%",
+        color: COLORS.white,
+        borderColor: COLORS.white,
+        height: "6%",
+        width: "60%",
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
 });
