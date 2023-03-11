@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     eventAndTime: {
         borderWidth: 3,
         borderColor: 'white',
-        backgroundColor: '#FCC3FF',
+        backgroundColor: 'rgba(252, 195, 255, 0.8)',
         flexDirection: 'row',
 
     }
