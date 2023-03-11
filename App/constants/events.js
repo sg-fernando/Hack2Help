@@ -9,6 +9,7 @@ const Events = [
         time: "12:00",
         location: "Location 1",
         image: assets.nft01,
+        organization: "SWE",
     }
     {
         id: 2,
