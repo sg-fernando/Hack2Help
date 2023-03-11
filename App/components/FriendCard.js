@@ -3,7 +3,7 @@ import { View, Text, Image, TextInput, StyleSheet } from "react-native";
 
 import { COLORS, FONTS, SIZES, assets } from "../constants";
 
-const FriendCard = ({ friend }) => {
+const FriendCard = ({ friend, handleRequest }) => {
     return (
         <View style={styles.containter}>
             <Image source={friend.image} style={styles.img}></Image>
