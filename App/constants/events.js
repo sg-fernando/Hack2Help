@@ -5,7 +5,7 @@ const Events = [
         id: 2,
         title: "Hack2Help",
         description: "This hackathon is all about using Computer Science to make a positive impact on an inequity in the world. Last year, participants made a website that had resources and tips for disadvantaged trans youth. Another team created a site that visualized the effects of global warming in the United States to educate people about the importance of limiting their carbon footprint. Find a problem you are passionate about and create a solution, whether it is about educating the general population or connecting them with resources.",
-        date: "2023-011-03",
+        date: "2023-11-03",
         time: "9:00",
         location: "CK",
         image: assets.nft01,
