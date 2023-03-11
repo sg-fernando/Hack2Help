@@ -6,7 +6,8 @@ import ViewModelInstance from '../ViewModel';
 import { Friend, FriendsHeader, Request } from '../components';
 
 const Following = ({ navigation }) => {
-    const [list, setList] = useState([{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]);
+    const orderSwipe = [{ id: 1, val: <Organizations /> }, { id: 2, val: <People handleRequest={handleRequest} /> }]
+    const [list, setList] = useState(orderSwipe);
     const [index, setIndex] = useState(0);
 
     const handleRequest = (val, person) => {
