@@ -11,10 +11,10 @@ const FriendsHeader = ({onSearch, index}) => {
     let groupTextComponent;
     if (index === 0) {
         friendTextComponent = <View style={styles.notSelected}><Text>My Friends</Text></View>;
-        groupTextComponent = <View style={styles.selected}><Text>Groups</Text></View>;
+        groupTextComponent = <View style={styles.selected}><Text>Groups/Organizations</Text></View>;
     } else {
         friendTextComponent = <View style={styles.selected}><Text>My Friends</Text></View>;
-        groupTextComponent = <View style={styles.notSelected}><Text>Groups</Text></View>;
+        groupTextComponent = <View style={styles.notSelected}><Text>Groups/Organizations</Text></View>;
     }
 
   return (
