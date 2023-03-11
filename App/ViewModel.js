@@ -60,8 +60,9 @@ class ViewModel {
             this.user = Users[0];
             this.otherUsers = this.user.others;
             this.friends = this.user.friends;
-            this.organizations = this.user.organizations;
+            this.organizations = Organizations;
             this.searchFriendsResults = this.user.friends;
+            this.searchOrganizationsResults = this.organizations;
             this.firstname = this.user.firstname;
             this.friendRequests = this.user.requests;
             this.modalVisible = false;
