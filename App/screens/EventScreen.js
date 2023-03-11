@@ -10,11 +10,20 @@ const EventScreen = ({ event }) => {
         <View style={styles.container}>
             <Image source={event.image} style={styles.image}></Image>
             <Text style={{ fontSize: 25, fontWeight: 'bold' }}>{event.title}</Text>
-            <Text style={{ fontSize: 15, fontWeight: 'light'}}>{event.description}</Text>
+            <Text style={{ fontSize: 15, fontWeight: 'light' }}>{event.description}</Text>
             <View style={styles.eventAndTime}>
-                <Text style={{ fontSize: 15, fontWeight: 'bold'}}>{event.date}, {event.time}</Text>
+                <Text style={{ fontSize: 15, fontWeight: 'bold' }}>{event.date}, {event.time}</Text>
             </View>
-            <Text style={{ fontSize: 20, fontWeight: 'bold'}}>{event.location}</Text>
+            <View>
+                <Text>Attending: </Text>
+                <FlatList
+                    data={event.attendants}
+                    renderItem={({ item }) => <Text style={{ fontSize: 17, fontWeight: 'light'}}>{item}</Text>}
+                    keyExtractor={item => item.id}
+                    showsVerticalScrollIndicator={false}
+                />
+            </View>
+            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{event.location}</Text>
         </View>
     </ImageBackground>
 }

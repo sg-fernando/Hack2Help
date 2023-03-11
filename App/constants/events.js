@@ -10,6 +10,7 @@ const Events = [
         location: "Location 1",
         image: assets.nft01,
         organization: "SWE",
+        attendants: ["Amia", "Kat", "Sephia", "Mei"],
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const Events = [
         time: "12:00",
         location: "Location 2",
         image: assets.nft01,
+        attendants: ["Fernando", "Arian", "Collin"],
     }
 ]
 
