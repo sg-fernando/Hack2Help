@@ -9,7 +9,7 @@ export default function Login({ navigation }) {
   const [username, onChangeUsername] = React.useState('');
   const [password, onChangePass] = React.useState('');
   return (
-    <ImageBackground source={assets.gradient} resizeMode="cover" style={styles.image}>
+    <ImageBackground source={assets.gradient5} resizeMode="cover" style={styles.image}>
       <SafeAreaView style={styles.container}>
 
         {/* Box with transparent and blur */}
