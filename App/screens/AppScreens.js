@@ -26,15 +26,8 @@ const AppScreens = () => {
                 ),
                 }}
         />
-      <Tab.Screen name="CalendarScreens" component={CalendarScreens} options={{
-                tabBarLabel: 'Calendar',
-                tabBarIcon: ({ color, size }) => (
-                    <Ionicons name="calendar" color={color} size={size} />
-                ),
-                }}
-        />
-      <Tab.Screen name="Friends" component={Friends} options={{
-                tabBarLabel: 'Friends',
+      <Tab.Screen name="Following" component={Following} options={{
+                tabBarLabel: 'Following',
                 tabBarIcon: ({ color, size }) => (
                     <Ionicons name="people" color={color} size={size} />
                 ),
